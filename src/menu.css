@@ -1,0 +1,326 @@
+    :root {
+      --dark: #0B1C14;
+      --beige: #FEFCED;
+      --accent: #C9C326;
+      --pink: #E58EB2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--dark);
+      background: var(--beige);
+      line-height: 1.5;
+    }
+
+    /* OWN */
+
+    .image-bg-left {
+      position: relative;
+      padding: 0;
+      /* Elimina el padding-top fijo */
+    }
+
+
+
+    /* Header */
+
+    .price {
+      color: var(--accent);
+      /* Asegúrate de definir este color */
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 15px;
+      /* Espacio entre el texto y el precio */
+    }
+
+    .category-title {
+      background-color: var(--beige);
+      border: 1px solid #000;
+      padding: 5px;
+      border-radius: 8px;
+    }
+
+    .appbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: color-mix(in oklab, var(--beige) 90%, white);
+      border-bottom: 1px solid color-mix(in oklab, var(--dark) 10%, transparent);
+      backdrop-filter: saturate(120%) blur(6px);
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .brand img {
+      height: 40px;
+      width: auto;
+    }
+
+    .brand h1 {
+      font-size: 18px;
+      margin: 0;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Search */
+    .search {
+      position: relative;
+      flex: 1;
+      max-width: 680px;
+      margin-left: 8px;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 10px 36px 10px 12px;
+      border-radius: 12px;
+      border: 1px solid #d9d9d9;
+      background: white;
+    }
+
+    .clear-btn {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 18px;
+      opacity: .6;
+    }
+
+    /* Layout */
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 64px);
+    }
+
+    .col-left {
+      display: flex;
+      flex-direction: column;
+      background: var(--dark);
+      color: white;
+      padding: 24px;
+    }
+
+    .col-left .image-bg-left {
+      padding-top: 49em;
+      justify-content: flex-end;
+    }
+
+    .col-right {
+      position: relative;
+      background: var(--beige);
+      color: var(--dark);
+      padding: 24px;
+      --bg-url: url('/saviaMenu/images/papel_parafinado_3.png');
+      background-image: radial-gradient(circle at 10% 10%, rgba(201, 195, 38, .18), transparent 40%),
+        radial-gradient(circle at 90% 20%, rgba(229, 142, 178, .18), transparent 45%),
+        var(--bg-url);
+      background-size: 600px, 520px, 320px;
+      background-repeat: no-repeat, no-repeat, repeat;
+    }
+
+    /* Sections */
+    section.menu-section {
+      margin: 0 0 28px 0;
+    }
+
+    section.menu-section .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: clamp(16px, 2vw, 22px);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin: 0 0 12px 0;
+    }
+
+    .title .bar {
+      flex: 1;
+      height: 2px;
+      background: var(--accent);
+      opacity: .9;
+      border-radius: 2px;
+    }
+
+    /* Cards on right column */
+    .card {
+      background: color-mix(in oklab, white 85%, var(--beige));
+      border: 1px solid color-mix(in oklab, var(--dark) 8%, transparent);
+      border-radius: 18px;
+      padding: 16px 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .05);
+      margin-bottom: 18px;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, .08);
+    }
+
+    /* Items */
+    .item {
+      padding: 10px 0;
+      border-bottom: 1px dashed color-mix(in oklab, var(--dark) 20%, transparent);
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .item h4 {
+      margin: 0 0 4px 0;
+      font-size: clamp(15px, 1.6vw, 19px);
+    }
+
+    .item p {
+      margin: 0;
+      opacity: .92;
+      font-size: clamp(13px, 1.2vw, 16px);
+    }
+
+    .item .sub {
+      margin-top: 2px;
+      opacity: .86;
+    }
+
+    .muted {
+      opacity: .85;
+    }
+
+    /* Left column variant (white text) */
+    .col-left .title .bar {
+      background: color-mix(in oklab, white 85%, var(--beige));
+    }
+
+    .col-left .card {
+      background: rgba(255, 255, 255, .06);
+      border-color: rgba(255, 255, 255, .12);
+      color: white;
+    }
+
+    .col-left .item {
+      border-bottom: 1px dashed rgba(255, 255, 255, .20);
+    }
+
+    /* Category chips nav */
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 10px 0 14px 0;
+    }
+
+    .chip {
+      border: 1px solid color-mix(in oklab, var(--dark) 15%, transparent);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: white;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: var(--accent);
+      color: var(--dark);
+      border-color: transparent;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 18px;
+      opacity: .75;
+    }
+
+    .product_description {
+      padding-top: 1em;
+      font-style: italic;
+      font-size: 0.8rem !important;
+      ;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .col-right {
+        background-size: 360px, 300px, 240px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand img {
+        height: 34px;
+      }
+
+      .appbar {
+        padding: 8px 12px;
+      }
+
+      .col-left,
+      .col-right {
+        padding: 16px;
+      }
+    }
+
+    /* Print */
+    @media print {
+
+      .appbar,
+      .chips,
+      .search {
+        display: none;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      body {
+        background: white;
+      }
+
+      .col-left {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
