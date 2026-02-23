@@ -1,0 +1,265 @@
+{
+  "sanduches": [
+    {
+      "type": "product",
+      "name": "Jamón artesano",
+      "price": "$19.000",
+      "description": "Salsa verde, queso doble crema, jamón de cerdo, rúgula, tomates horneados, parmesano."
+    },
+    {
+      "type": "product",
+      "name": "Del huerto",
+      "price": "$16.000",
+      "description": "Mayonesa de rostizados, queso feta, rúgula, tomates horneados, champiñones, parmesano, mix de semillas, chips de arracacha."
+    },
+    {
+      "type": "product",
+      "name": "Pollo Green",
+      "price": "$17.000",
+      "description": "Mayonesa de rostizados y verde, jamón de pollo, guacamole, tomate horneado, semillas de girasol, lechuga, tocineta."
+    },
+    {
+      "type": "product",
+      "name": "Pollo Toscano",
+      "price": "$19.000",
+      "description": "Salsa verde, Jamón de Pollo, lechuga, rúgula, champiñones, tomates horneados, parmesano, queso doble crema, tocineta, miel de uvilla."
+    },
+    {
+      "type": "product",
+      "name": "Mexicano",
+      "price": "$19.000",
+      "description": "Frijol refrito, pollo desmechado, pico de gallo, queso crema tajado, guacamole, sour cream, salsa brava."
+    },
+    {
+      "type": "note",
+      "text": "Elige entre Pan Siabata o Pan blanco."
+    }
+  ],
+  "bowlssalados": [
+    {
+      "type": "options",
+      "name": "Elige tu base",
+      "optionsLabel": "(2 opciones)",
+      "options": [
+        "Arroz",
+        "Pasta",
+        "Quinua"
+      ]
+    },
+    {
+      "type": "options",
+      "name": "Elige tus toppings",
+      "optionsLabel": "(4 opciones)",
+      "options": [
+        "Maíz tierno",
+        "Champiñones",
+        "Pico de gallo",
+        "Guacamole",
+        "Tocineta",
+        "Chips de arracacha",
+        "Queso feta",
+        "Zanahoria",
+        "Pepino",
+        "Maiz tostado",
+        "Cebolla encurtida"
+      ]
+    },
+    {
+      "type": "options",
+      "name": "Elige tu proteína",
+      "optionsLabel": "(1 opción)",
+      "options": [
+        "Atún +$1.500",
+        "Pechuga de pollo",
+        "Jamón de cerdo",
+        "Carne desmechada"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "La adición de Proteína tiene un costo adicional de $5.000"
+    }
+  ],
+  "calientes": [
+    {
+      "type": "product",
+      "name": "Capuccino",
+      "price": "$6.000"
+    },
+    {
+      "type": "product",
+      "name": "Latte",
+      "price": "$5.500"
+    },
+    {
+      "type": "product",
+      "name": "Americano",
+      "price": "$5.500"
+    },
+    {
+      "type": "product",
+      "name": "Cocoa",
+      "price": "$6.000"
+    },
+    {
+      "type": "product",
+      "name": "Pitaya latte",
+      "price": "$8.500"
+    },
+    {
+      "type": "product",
+      "name": "Infusión de frutos rojos",
+      "price": "$6.000"
+    }
+  ],
+  "acompanamientos": [
+    {
+      "type": "product",
+      "name": "Torta del día",
+      "price": "$8.000"
+    },
+    {
+      "type": "product",
+      "name": "Galletas de avena",
+      "price": "$4.000"
+    },
+    {
+      "type": "product",
+      "name": "Muffin de queso",
+      "price": "$4.500"
+    },
+    {
+      "type": "product",
+      "name": "Empanadas Argentinas",
+      "price": "$5.000",
+      "description": "Empanadas de Carne, Jamón y Pollo x $5.500"
+    },
+    {
+      "type": "product",
+      "name": "Porción de Cheeseecake",
+      "price": "$5.000",
+      "description": "Cheesecake de del día."
+    }
+  ],
+  "bowlsfrutales": [
+    {
+      "type": "options",
+      "name": "Elige tu base",
+      "optionsLabel": "(1 opción)",
+      "options": [
+        "Frutos Rojos",
+        "Frutos Amarillos",
+        "Vital"
+      ]
+    },
+    {
+      "type": "options",
+      "name": "Elige tus toppings",
+      "optionsLabel": "(4 opciones)",
+      "options": [
+        "Mango",
+        "Fresa",
+        "Crema de maní",
+        "Banano",
+        "Manzana",
+        "Granola",
+        "Piña",
+        "Coco Rallado",
+        "Arándanos",
+        "Semillas"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Porción de Yogurt Griego +$3.000"
+    },
+    {
+      "type": "note",
+      "text": "La adición de Topping tiene un costo de $2.000"
+    }
+  ],
+  "refrescantes": [
+    {
+      "type": "product",
+      "name": "Amanecer",
+      "price": "$9.500",
+      "description": "Mango, piña, menta, semillas de chía."
+    },
+    {
+      "type": "product",
+      "name": "Sandía salvaje",
+      "price": "$9.500",
+      "description": "Sandía, fresa, hierbabuena, limón, kiwi."
+    }
+  ],
+  "funcionales": [
+    {
+      "type": "product",
+      "name": "Golden milk",
+      "price": "$10.500",
+      "description": "Mango, banano, yogurt natural, leche, miel, chía, cúrcuma, maca."
+    },
+    {
+      "type": "product",
+      "name": "Digest",
+      "price": "$10.500",
+      "description": "Sábila, piña, kiwi, chía, naranja, miel."
+    },
+    {
+      "type": "product",
+      "name": "Saciante",
+      "price": "$10.500",
+      "description": "Arándano, fresa, banano, leche, chía, avena."
+    }
+  ],
+  "especiales": [
+    {
+      "type": "product",
+      "name": "Pink",
+      "price": "$12.000",
+      "description": "Fresa, banano, yogurt natural, leche, chía, avena."
+    },
+    {
+      "type": "product",
+      "name": "Moca energy",
+      "price": "$12.000",
+      "description": "Banano, café frío, leche, cacao puro, crema de maní, avena."
+    },
+    {
+      "type": "product",
+      "name": "Matcha protein",
+      "price": "$16.000",
+      "description": "Té matcha, scoop de proteína whey pure (30 g)."
+    }
+  ],
+  "frias": [
+    {
+      "type": "product",
+      "name": "Matcha latte helado",
+      "price": "$11.000",
+      "description": "Té matcha con leche y hielo."
+    },
+    {
+      "type": "product",
+      "name": "Blue latte helado",
+      "price": "$10.500",
+      "description": "Té azul en leche o bebida vegetal con hielo."
+    },
+    {
+      "type": "product",
+      "name": "Limonada azul",
+      "price": "$10.000",
+      "description": "Mezcla de limón y té azul."
+    },
+    {
+      "type": "product",
+      "name": "Café Pitaya",
+      "price": "$10.500",
+      "description": "Café y pitaya rosa."
+    },
+    {
+      "type": "note",
+      "text": "Bebida Vegetal +$3.000"
+    }
+  ]
+}

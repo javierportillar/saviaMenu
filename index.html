@@ -318,9 +318,9 @@
       /* badge con el número de opciones */
       background: color-mix(in oklab, var(--accent) 100%, transparent);
       border: 1px solid rgba(255, 255, 255, .22);
-      padding: 2px 8px;
+      padding: 2px 10px;
       border-radius: 999px;
-      font-size: 11px;
+      font-size: 14px;
       font-weight: 800;
       opacity: 1;
     }
@@ -340,8 +340,9 @@
       border: 1px solid rgba(255, 255, 255, .16);
       border-radius: 12px;
       padding: 8px 10px;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.15;
+      font-weight: 500;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -368,6 +369,81 @@
       color: #d2e6c7;
     }
 
+    /* ===== Bowls Frutales – Estilización ===== */
+    #bowlsfrutales .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, .82) 0%, rgba(248, 245, 228, .94) 100%);
+      border: 1px solid color-mix(in oklab, var(--dark) 12%, transparent);
+      box-shadow: 0 10px 24px rgba(11, 28, 20, .08);
+    }
+
+    #bowlsfrutales .item {
+      border-bottom: none;
+      padding: 14px 0;
+    }
+
+    #bowlsfrutales .item+.item {
+      border-top: 1px dashed color-mix(in oklab, var(--dark) 20%, transparent);
+      padding-top: 18px;
+    }
+
+    #bowlsfrutales h4 {
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 800;
+      color: color-mix(in oklab, var(--dark) 96%, black);
+    }
+
+    #bowlsfrutales h4 .muted {
+      background: color-mix(in oklab, var(--accent) 92%, white);
+      border: 1px solid color-mix(in oklab, var(--dark) 14%, transparent);
+      color: color-mix(in oklab, var(--dark) 75%, black);
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      opacity: 1;
+    }
+
+    #bowlsfrutales .item ul {
+      list-style: none;
+      margin: 10px 0 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    #bowlsfrutales .item ul li {
+      background: color-mix(in oklab, white 70%, var(--beige));
+      border: 1px solid color-mix(in oklab, var(--dark) 14%, transparent);
+      border-radius: 12px;
+      padding: 9px 12px;
+      font-size: 15px;
+      line-height: 1.15;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+
+    #bowlsfrutales .item ul li::before {
+      content: "✦";
+      font-size: 12px;
+      color: color-mix(in oklab, var(--accent) 88%, #7a7400);
+      opacity: .95;
+    }
+
+    #bowlsfrutales .item ul li:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in oklab, var(--accent) 60%, var(--dark));
+      box-shadow: 0 6px 12px rgba(11, 28, 20, .08);
+    }
+
     #mensaje-card {
       background: rgba(255, 255, 255, 0.761);
     }
@@ -383,6 +459,10 @@
     @media (max-width: 1024px) {
 
       #bowlssalados .item ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #bowlsfrutales .item ul {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
@@ -412,6 +492,10 @@
 
       #bowlssalados .item ul {
         grid-template-columns: 1fr 1fr;
+      }
+
+      #bowlsfrutales .item ul {
+        grid-template-columns: 1fr;
       }
 
 
@@ -465,149 +549,27 @@
       <div class="col-left">
         <section class="menu-section" id="sanduches">
           <h2 class="title">Sandwiches <span class="bar"></span></h2>
-          <p id="promodiscount">Todos los sándwiches tienen el 10% de descuento para estudiantes. (Mostrando tu carnet
-            estudiantil) </p>
-          <div class="card">
-            <article class='item'
-              data-text='jamón artesano jamón de cerdo, miel de uvilla, cebolla, tomate horneado, rúgula, queso tajado, queso parmesano, salsa verde.'>
-              <h4>Jamón artesano <span class="price">$18.500</span>
-              </h4>
-              <p>Salsa verde, queso doble crema, jamón de cerdo, rúgula, tomates horneados, parmesano.</p>
-
-            </article>
-            <article class='item'
-              data-text='del huerto champiñones, mayonesa rostizada, queso feta, crocantes de arracacha, tomate horneado, semillas de calabaza, queso tajado.'>
-              <h4>Del huerto <span class="price">$15.500</span>
-              </h4>
-              <p>Mayonesa de rostizados, queso feta, rúgula, tomates horneados, champiñones, parmesano, mix de semillas,
-                chips de arracacha.</p>
-            </article>
-            <article class='item'
-              data-text='pollo green jamón de pollo, rúgula, champiñones, parmesano, guacamole, salsa verde, salsa rostizada, lechuga, tomate horneado, semillas.'>
-              <h4>Pollo Green <span class="price">$16.500</span>
-              </h4>
-              <p>Mayonesa de rostizados y verde, jamón de pollo, guacamole, tomate horneado, semillas de girasol,
-                lechuga, tocineta.</p>
-            </article>
-            <article class='item'
-              data-text='pollo toscano jamón de pollo, lechuga, rúgula, champiñones, tomate horneado, queso tajado, queso parmesano, tocineta.'>
-              <h4>Pollo Toscano <span class="price">$18.500</span> </h4>
-              <p>Salsa verde, Jamón de Pollo, lechuga, rúgula, champiñones, tomates horneados, parmesano, queso doble
-                crema, tocineta, miel de uvilla.</p>
-            </article>
-            <article class='item'
-              data-text='mexicano pollo desmechado, guacamole, pico de gallo, frijol refrito, salsa brava, sour cream, queso tajado.'>
-              <h4>Mexicano <span class="price">$19.000</span>
-              </h4>
-              <p>Frijol refrito, pollo desmechado, pico de gallo, queso crema tajado, guacamole, sour cream, salsa
-                brava.</p>
-            </article>
-            <article class='item'>
-              <span class="price">Tu sandwich incluye bebida :)</span>
-            </article>
-          </div>
+          <!-- <p id="promodiscount">Todos los sándwiches tienen el 10% de descuento para estudiantes. (Mostrando tu carnet
+            estudiantil)</p> -->
+          <div class="card" data-menu-section="sanduches"></div>
         </section>
+
         <section class="menu-section" id="bowlssalados">
-          <h2 class="title">Bowls Salados<small class="muted">26 oz</small><span class="price">$15.000</span> <span
+          <h2 class="title">Bowls Salados<small class="muted">26 oz</small><span class="price">$16.000</span> <span
               class="bar"></span></h2>
-          <div class="card">
-            <article class="item" data-text="elige tu base 2 opciones arroz pasta quinua">
-              <h4>Elige tu base <span class="muted">(2 opciones)</span></h4>
-              <ul>
-                <li>Arroz</li>
-                <li>Pasta</li>
-                <li>Quinua</li>
-              </ul>
-            </article>
-
-            <article class="item"
-              data-text="elige tus toppings 4 opciones maíz tierno champiñones pico de gallo guacamole tocineta chips de arracacha queso feta zanahoria">
-              <h4>Elige tus toppings <span class="muted">(4 opciones)</span></h4>
-              <ul>
-                <li>Maíz tierno</li>
-                <li>Champiñones</li>
-                <li>Pico de gallo</li>
-                <li>Guacamole</li>
-                <li>Tocineta</li>
-                <li>Chips de arracacha</li>
-                <li>Queso feta</li>
-                <li>Zanahoria</li>
-                <li>Pepino</li>
-              </ul>
-            </article>
-
-            <article class="item"
-              data-text="elige tu proteína pechuga de pollo jamón de cerdo carne desmechada champiñones queso de soya">
-              <h4>Elige tu proteína<span class="muted">(1 opción)</span></h4>
-              <ul>
-                <li>Pechuga de pollo</li>
-                <li>Jamón de cerdo</li>
-                <li>Carne desmechada</li>
-              </ul>
-            </article>
-
-            <article class="item">
-              <span class="price">Tu bowl incluye bebida :)</span>
-            </article>
-
-          </div>
+          <div class="card" data-menu-section="bowlssalados"></div>
         </section>
 
         <section class="menu-section" id="calientes">
           <h2 class="title">Bebidas calientes <span class="bar"></span></h2>
-          <div class="card">
-            <article class='item' data-text='capuccino'>
-              <h4>Capuccino <span class="price">$6.000</span></h4>
-
-            </article>
-            <article class='item' data-text='latte'>
-              <h4>Latte <span class="price">$5.500</span></h4>
-            </article>
-            <article class='item' data-text='americano'>
-              <h4>Americano<span class="price">$5.500</span></h4>
-            </article>
-            <article class='item' data-text='cocoa'>
-              <h4>Cocoa <span class="price">$6.000</span></h4>
-            </article>
-            <!-- 
-              <article class='item' data-text='matcha latte'>
-                <h4>Matcha latte <span class="price">$10.000</span></h4>
-              </article>
-              <article class='item' data-text='blue latte'>
-                <h4>Blue latte <span class="price">$8.500</span></h4>
-              </article>
-              <article class='item' data-text='infusión mariposa'>
-                <h4>Infusión mariposa <span class="price">$6.500</span></h4>
-              </article>
-            -->
-            <article class='item' data-text='pitaya latte'>
-              <h4>Pitaya latte <span class="price">$8.500</span></h4>
-            </article>
-            <article class='item' data-text='infusión de frutos rojos'>
-              <h4>Infusión de frutos rojos<span class="price">$6.000</span></h4>
-            </article>
-          </div>
+          <div class="card" data-menu-section="calientes"></div>
         </section>
 
         <section class="menu-section" id="acompanamientos">
           <h2 class="title">Acompañamientos <span class="bar"></span></h2>
-          <div class="card">
-            <article class='item'
-              data-text='torta del día zanahoria, arándanos o naranja. harina de almendra y coco, endulzada con banano y cubierta con yogurt griego.'>
-              <h4>Torta del día <span class="price">$8.000</span></h4>
-            </article>
-            <article class='item' data-text='galletas de avena '>
-              <h4>Galletas de avena <span class="price">$4.000</span></h4>
-            </article>
-            <article class='item' data-text='muffin de queso'>
-              <h4>Muffin de queso <span class="price">$4.500</span></h4>
-            </article>
-            <article class='item' data-text='tapitas pan acompañado de queso feta, tomate al horno y albahaca.'>
-              <h4>Tapitas <span class="price">$10.000</span></h4>
-              <p>Pan acompañado de queso feta, tomate al horno y albahaca.</p>
-            </article>
-          </div>
+          <div class="card" data-menu-section="acompanamientos"></div>
         </section>
+
         <div class="image-bg-left">
           <img src="/saviaMenu/images/PACKAGING SAVIA_Mesa.png" alt="imagenbgIz" width="100%">
         </div>
@@ -615,152 +577,38 @@
 
       <!-- Right column -->
       <div class="col-right">
-
         <section class="menu-section" id="bowlsfrutales">
-          <h2 class="title category-title">Bowls Frutales<small class="muted">16 oz</small> <span class="bar"></span>
+          <h2 class="title category-title">Bowls Frutales<small class="muted">16 oz</small><span
+              class="price">$13.500</span> <span class="bar"></span>
           </h2>
-          <div class="card">
-            <article class='item'
-              data-text='açaí supremo açaí, banano, yogurt natural, leche o bebida vegetal. fresa, mango, banano, chía, arándanos, coco, crema de maní, yogurt griego con matcha.'>
-              <h4>Açai Supremo<span class="price">$14.500</span></h4>
-              <p class='sub'><strong>Base:</strong> Açaí, fresa, banano, yogurt natural, leche o bebida vegetal.</p>
-              <p class='sub'><strong>Toppings:</strong> Kiwi, fresa, banano, coco, arándanos, semillas, crema de maní.
-              </p>
-            </article>
-            <article class='item'
-              data-text='tropical mango, piña, banano, yogurt natural, leche o bebida vegetal. kiwi, mango, granola, semillas de girasol, coco.'>
-              <h4>Tropical<span class="price">$12.000</span></h4>
-              <p class='sub'><strong>Base:</strong> Mango, piña, banano, yogurt natural, leche o bebida vegetal.</p>
-              <p class='sub'><strong>Toppings:</strong> Kiwi, mango, granola, semillas de girasol, coco.</p>
-            </article>
-            <article class='item'
-              data-text='vital mango, banano, piña, espinaca, yogurt natural, leche o bebida vegetal. kiwi, arándano, chía latte, coco.'>
-              <h4>Vital <span class="price">$12.000</span></h4>
-              <p class='sub'><strong>Base:</strong> Mango, banano, piña, espinaca, yogurt natural, leche o bebida
-                vegetal.
-              </p>
-              <p class='sub'><strong>Toppings:</strong> Kiwi, arándano, granola, chía latte, coco.</p>
-            </article>
-          </div>
+          <div class="card" data-menu-section="bowlsfrutales"></div>
         </section>
 
         <section class="menu-section" id="refrescantes">
           <h2 class="title category-title">Batidos refrescantes <span class="bar"></span></h2>
-          <div class="card">
-            <article class='item' data-text='amanecer mango, piña, menta, semillas de chía.'>
-              <h4>Amanecer <span class="price">$9.500</span></h4>
-              <p>Mango, piña, menta, semillas de chía.</p>
-            </article>
-            <article class='item' data-text='sandía salvaje sandía, fresa, hierbabuena, limón, kiwi.'>
-              <h4>Sandía salvaje<span class="price">$9.500</span></h4>
-              <p>Sandía, fresa, hierbabuena, limón, kiwi.</p>
-            </article>
-            <article class='item' data-text='piña rosa hierbabuena, pitaya rosada, piña, limón.'>
-              <h4>Piña rosa <span class="price">$9.500</span></h4>
-              <p>Hierbabuena, pitaya rosada, piña, limón.</p>
-            </article>
-          </div>
+          <div class="card" data-menu-section="refrescantes"></div>
         </section>
+
         <section class="menu-section" id="funcionales">
           <h2 class="title category-title">Batidos funcionales <span class="bar"></span></h2>
-          <div class="card">
-            <article class='item'
-              data-text='golden milk mango, banano, yogurt natural, leche, miel, chía, cúrcuma, maca.'>
-              <h4>Golden milk <span class="price">$10.500</span></h4>
-              <p>Mango, banano, yogurt natural, leche, miel, chía, cúrcuma, maca.</p>
-            </article>
-            <article class='item' data-text='digest sábila, piña, kiwi, chía, naranja, miel.'>
-              <h4>Digest <span class="price">$10.500</span></h4>
-              <p>Sábila, piña, kiwi, chía, naranja, miel.</p>
-            </article>
-            <article class='item' data-text='antioxidante sandía, remolacha, jengibre, mora, limón, chía.'>
-              <h4>Antioxidante <span class="price">$10.500</span></h4>
-              <p>Sandía, remolacha, jengibre, mora, limón, chía.</p>
-            </article>
-            <article class='item' data-text='saciante arándano, fresa, banano, leche, chía, avena.'>
-              <h4>Saciante <span class="price">$10.500</span></h4>
-              <p>Arándano, fresa, banano, leche, chía, avena.</p>
-            </article>
-            <article class='item'
-              data-text='detox jengibre, apio, perejil, menta fresca, manzana verde, kiwi, pepino, naranja, miel.'>
-              <h4>Detox <span class="price">$10.500</span></h4>
-              <p>Jengibre, apio, perejil, menta fresca, manzana verde, kiwi, pepino, naranja, miel.</p>
-            </article>
-          </div>
+          <div class="card" data-menu-section="funcionales"></div>
         </section>
+
         <section class="menu-section" id="especiales">
           <h2 class="title category-title">Batidos especiales <span class="bar"></span></h2>
-          <div class="card">
-            <article class='item' data-text='pink fresa, banano, yogurt natural, leche, chía, avena.'>
-              <h4>Pink <span class="price">$12.000</span></h4>
-              <p>Fresa, banano, yogurt natural, leche, chía, avena.</p>
-            </article>
-            <article class='item' data-text='mocha energy banano, café frío, leche, cacao puro, crema de maní, avena.'>
-              <h4>Moca energy <span class="price">$12.000</span></h4>
-              <p>Banano, café frío, leche, cacao puro, crema de maní, avena.</p>
-            </article>
-            <!-- 
-              <article class='item' data-text='choco avocado banano, aguacate, leche, miel, cacao puro, avena.'>
-              <h4>Choco avocado <span class="price">$12.000</span></h4>
-              <p>Banano, aguacate, leche, miel, cacao puro, avena.</p>
-            </article>
-            <article class='item' data-text='berries arándano, yogurt natural, leche, avena, semillas de calabaza.'>
-              <h4>Berries <span class="price">$13.000</span></h4>
-              <p>Arándano, yogurt natural, leche, avena, semillas de calabaza.</p>
-            </article>
-            <article class='item'
-              data-text='matcha energy banano, yogurt natural, leche, miel, matcha, semillas de calabaza, avena.'>
-              <h4>Matcha energy <span class="price">$12.000</span></h4>
-              <p>Banano, yogurt natural, leche, miel, matcha, semillas de calabaza, avena.</p>
-            </article>
-            -->
-            <article class='item' data-text='matcha protein té matcha, scoop de proteína whey pure (30 g).'>
-              <h4>Matcha protein <span class="price">$16.000</span></h4>
-              <p>Té matcha, scoop de proteína whey pure (30 g).</p>
-            </article>
-          </div>
+          <div class="card" data-menu-section="especiales"></div>
         </section>
 
         <section class="menu-section" id="frias">
           <h2 class="title category-title">Bebidas frías <span class="bar"></span></h2>
-          <div class="card">
-            <article class='item' data-text='ice matcha latte té matcha en leche o bebida vegetal con hielo.'>
-              <h4>Matcha latte helado<span class="price">$11.000</span></h4>
-              <p>Té matcha con leche y hielo.</p>
-            </article>
-            <article class='item' data-text='ice blue latte té azul en leche o bebida vegetal con hielo.'>
-              <h4>Blue latte helado <span class="price">$10.500</span></h4>
-              <p>Té azul en leche o bebida vegetal con hielo.</p>
-            </article>
-            <!-- <article class='item' data-text='ice coffee latte hielos de café, en leche o bebida vegetal.'>
-              <h4>Ice coffee latte<span class="price">$11.500</span></h4>
-              <p>Hielos de café, en leche o bebida vegetal.</p>
-            </article> 
-            <article class='item' data-text='blue coffee café y té azul.'>
-              <h4>Blue coffee <span class="price">$10.500</span></h4>
-              <p>Café y té azul.</p>
-            </article>
-          -->
-            <article class='item' data-text='limonada azul mezcla de limón y té azul.'>
-              <h4>Limonada azul <span class="price">$10.000</span></h4>
-              <p>Mezcla de limón y té azul.</p>
-            </article>
-            <article class='item' data-text='pink coffee café y pitaya rosa.'>
-              <h4>Café Pitaya<span class="price">$10.500</span></h4>
-              <p>Café y pitaya rosa.</p>
-            </article>
-            <article class="item">
-              <span class="price">Bebida Vegetal +2000</span>
-            </article>
-          </div>
+          <div class="card" data-menu-section="frias"></div>
         </section>
+
         <section class="menu-section" id="mensaje">
           <div class="card" id="mensaje-card">
-            <article class='item'>
+            <article class="item">
               <p id="mensaje-text">Savia elabora sus preparaciones con productos naturales, frescos y de alta calidad.
-                Todo
-                lo que
-                necesita tu cuerpo para verse bien y sentirse bien.</p>
+                Todo lo que necesita tu cuerpo para verse bien y sentirse bien.</p>
             </article>
           </div>
         </section>
@@ -774,29 +622,139 @@
 
     <script>
       const q = document.getElementById('q');
+      const MENU_DATA_URL = new URL('./data/menu-items.json', window.location.href).href;
+
+      function buildSearchText(item) {
+        if (item.searchText) return item.searchText.toLowerCase();
+
+        const parts = [item.name, item.description, item.text, item.optionsLabel];
+
+        if (Array.isArray(item.options)) {
+          parts.push(item.options.join(' '));
+        }
+
+        if (Array.isArray(item.subLines)) {
+          item.subLines.forEach(line => parts.push(line.label, line.text));
+        }
+
+        return parts.filter(Boolean).join(' ').toLowerCase();
+      }
+
+      function createItemElement(item) {
+        const article = document.createElement('article');
+        article.className = 'item';
+        article.setAttribute('data-text', buildSearchText(item));
+
+        if (item.type === 'note') {
+          const note = document.createElement('span');
+          note.className = 'price';
+          note.textContent = item.text;
+          article.appendChild(note);
+          return article;
+        }
+
+        const title = document.createElement('h4');
+        title.appendChild(document.createTextNode(item.name || ''));
+
+        if (item.price) {
+          title.appendChild(document.createTextNode(' '));
+          const price = document.createElement('span');
+          price.className = 'price';
+          price.textContent = item.price;
+          title.appendChild(price);
+        }
+
+        if (item.optionsLabel) {
+          title.appendChild(document.createTextNode(' '));
+          const optionsLabel = document.createElement('span');
+          optionsLabel.className = 'muted';
+          optionsLabel.textContent = item.optionsLabel;
+          title.appendChild(optionsLabel);
+        }
+
+        article.appendChild(title);
+
+        if (item.description) {
+          const description = document.createElement('p');
+          description.textContent = item.description;
+          article.appendChild(description);
+        }
+
+        if (Array.isArray(item.subLines)) {
+          item.subLines.forEach(line => {
+            const p = document.createElement('p');
+            p.className = 'sub';
+
+            const label = document.createElement('strong');
+            label.textContent = `${line.label}:`;
+            p.appendChild(label);
+            p.appendChild(document.createTextNode(` ${line.text}`));
+            article.appendChild(p);
+          });
+        }
+
+        if (Array.isArray(item.options) && item.options.length > 0) {
+          const list = document.createElement('ul');
+
+          item.options.forEach(option => {
+            const li = document.createElement('li');
+            li.textContent = option;
+            list.appendChild(li);
+          });
+
+          article.appendChild(list);
+        }
+
+        return article;
+      }
+
+      function renderMenu(data) {
+        Object.entries(data).forEach(([sectionId, items]) => {
+          const container = document.querySelector(`[data-menu-section="${sectionId}"]`);
+          if (!container || !Array.isArray(items)) return;
+
+          const fragment = document.createDocumentFragment();
+          items.forEach(item => fragment.appendChild(createItemElement(item)));
+          container.replaceChildren(fragment);
+        });
+      }
 
       function filterMenu() {
         const term = q.value.toLowerCase().trim();
         const allItems = Array.from(document.querySelectorAll('.item'));
-        let matchedSections = new Set();
 
         allItems.forEach(el => {
           const text = el.getAttribute('data-text') || el.textContent.toLowerCase();
           const match = term === '' || text.includes(term);
           el.style.display = match ? '' : 'none';
-          if (match) matchedSections.add(el.closest('section.menu-section'));
         });
 
-        // Hide empty cards/sections
         document.querySelectorAll('section.menu-section').forEach(section => {
           const visible = section.querySelectorAll('.item:not([style*="display: none"])').length > 0;
           section.style.display = visible ? '' : 'none';
         });
       }
 
+      async function initMenu() {
+        try {
+          const response = await fetch(MENU_DATA_URL, { cache: 'no-store' });
+          if (!response.ok) throw new Error('No se pudo cargar el menú.');
+          const data = await response.json();
+          renderMenu(data);
+          filterMenu();
+        } catch (error) {
+          console.error(error);
+          const msg = document.getElementById('mensaje-text');
+          if (msg) {
+            msg.textContent = 'No se pudo cargar el menú desde data/menu-items.json. Si abriste el archivo como file://, usa un servidor local (por ejemplo: npm run dev).';
+          }
+        }
+      }
+
       q.addEventListener('input', filterMenu);
+      initMenu();
     </script>
+  </div>
 </body>
-</div>
 
 </html>
