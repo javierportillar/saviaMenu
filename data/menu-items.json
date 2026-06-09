@@ -32,7 +32,7 @@
     },
     {
       "type": "note",
-      "text": "Elige entre Pan Siabata o Pan blanco."
+      "text": "Elige entre pan ciabatta o pan blanco."
     }
   ],
   "bowlssalados": [
@@ -78,6 +78,10 @@
     {
       "type": "note",
       "text": "La adición de Proteína tiene un costo adicional de $5.000"
+    },
+    {
+      "type": "note",
+      "text": "La adición de topping extra tiene un costo de $3.000"
     }
   ],
   "calientes": [
@@ -129,10 +133,15 @@
       "price": "$4.500"
     },
     {
-      "type": "product",
       "name": "Empanadas Argentinas",
-      "price": "$5.000",
-      "description": "Empanadas de Carne, Jamón y Pollo x $5.500"
+      "price": "$5.500",
+      "type": "options",
+      "options": [
+        "Atún y cebolla",
+        "Carne, huevo duro y aceitunas",
+        "Jamón, mozarella y orégano",
+        "Pollo al verdeo y tocineta"
+      ]
     },
     {
       "type": "product",
@@ -147,9 +156,9 @@
       "name": "Elige tu base",
       "optionsLabel": "(1 opción)",
       "options": [
-        "Frutos Rojos",
-        "Frutos Amarillos",
-        "Vital"
+        "Frutos rojos: fresas, mora, yogurt griego, chía, leche",
+        "Frutos amarillos: piña, mango, yogurt griego, chía, leche",
+        "Vital: piña, mango, espinaca, yogurt griego, chía, leche"
       ]
     },
     {
@@ -189,7 +198,7 @@
       "type": "product",
       "name": "Sandía salvaje",
       "price": "$9.500",
-      "description": "Sandía, fresa, hierbabuena, limón, kiwi."
+      "description": "Sandía, fresa, hierbabuena, limón."
     }
   ],
   "funcionales": [
@@ -210,6 +219,10 @@
       "name": "Saciante",
       "price": "$10.500",
       "description": "Arándano, fresa, banano, leche, chía, avena."
+    },
+    {
+      "type": "note",
+      "text": "Bebida Vegetal +$3.000"
     }
   ],
   "especiales": [
@@ -230,6 +243,14 @@
       "name": "Matcha protein",
       "price": "$16.000",
       "description": "Té matcha, scoop de proteína whey pure (30 g)."
+    },
+    {
+      "type": "note",
+      "text": "Adición de proteína +$6.000"
+    },
+    {
+      "type": "note",
+      "text": "Bebida Vegetal +$3.000"
     }
   ],
   "frias": [

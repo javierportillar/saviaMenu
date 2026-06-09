@@ -34,6 +34,7 @@
       color: var(--dark);
       background: var(--beige);
       line-height: 1.5;
+      font-size: 17px;
     }
 
     /* OWN */
@@ -53,7 +54,7 @@
       /* Asegúrate de definir este color */
       font-weight: bold;
       margin-left: 10px;
-      font-size: 15px;
+      font-size: 17px;
       /* Espacio entre el texto y el precio */
     }
 
@@ -91,7 +92,7 @@
     }
 
     .brand h1 {
-      font-size: 18px;
+      font-size: 20px;
       margin: 0;
       letter-spacing: .8px;
       text-transform: uppercase;
@@ -175,7 +176,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: clamp(16px, 2vw, 22px);
+      font-size: clamp(18px, 2.2vw, 24px);
       text-transform: uppercase;
       letter-spacing: .06em;
       margin: 0 0 12px 0;
@@ -217,13 +218,13 @@
 
     .item h4 {
       margin: 0 0 4px 0;
-      font-size: clamp(15px, 1.6vw, 19px);
+      font-size: clamp(17px, 1.9vw, 21px);
     }
 
     .item p {
       margin: 0;
       opacity: .92;
-      font-size: clamp(13px, 1.2vw, 16px);
+      font-size: clamp(14px, 1.4vw, 17px);
     }
 
     .item .sub {
@@ -262,7 +263,7 @@
       border: 1px solid color-mix(in oklab, var(--dark) 15%, transparent);
       padding: 6px 10px;
       border-radius: 999px;
-      font-size: 12px;
+      font-size: 13px;
       background: white;
       cursor: pointer;
     }
@@ -421,27 +422,96 @@
       background: color-mix(in oklab, white 70%, var(--beige));
       border: 1px solid color-mix(in oklab, var(--dark) 14%, transparent);
       border-radius: 12px;
-      padding: 9px 12px;
+      padding: 10px 14px;
       font-size: 15px;
-      line-height: 1.15;
+      line-height: 1.25;
       font-weight: 600;
       display: flex;
-      align-items: center;
-      gap: 8px;
+      align-items: flex-start;
+      gap: 10px;
+      position: relative;
       transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
     }
 
     #bowlsfrutales .item ul li::before {
       content: "✦";
-      font-size: 12px;
+      font-size: 11px;
       color: color-mix(in oklab, var(--accent) 88%, #7a7400);
       opacity: .95;
+      margin-top: 4px;
     }
 
     #bowlsfrutales .item ul li:hover {
       transform: translateY(-1px);
       border-color: color-mix(in oklab, var(--accent) 60%, var(--dark));
       box-shadow: 0 6px 12px rgba(11, 28, 20, .08);
+    }
+
+    /* Bloque de bases: tarjetas con acento suave */
+    #bowlsfrutales .item:first-child ul li {
+      background: linear-gradient(180deg,
+          color-mix(in oklab, white 82%, var(--beige)) 0%,
+          color-mix(in oklab, white 72%, var(--beige)) 100%);
+      border-color: color-mix(in oklab, var(--dark) 18%, transparent);
+      border-left: 5px solid color-mix(in oklab, var(--accent) 78%, #9b950f);
+      padding-left: 12px;
+      box-shadow: 0 3px 10px rgba(11, 28, 20, .05);
+    }
+
+    /* ===== Acompañamientos – Mejora visual ===== */
+    #acompanamientos .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, .07) 0%, rgba(255, 255, 255, .04) 100%);
+      border: 1px solid rgba(255, 255, 255, .16);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .14);
+    }
+
+    #acompanamientos .item {
+      border-bottom: none;
+      padding: 12px 0;
+    }
+
+    #acompanamientos .item+.item {
+      border-top: 1px dashed rgba(255, 255, 255, .18);
+      padding-top: 14px;
+    }
+
+    #acompanamientos .item h4 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    #acompanamientos .item h4 .price {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    #acompanamientos .item ul {
+      list-style: none;
+      margin: 8px 0 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    #acompanamientos .item ul li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .09);
+      border: 1px solid rgba(255, 255, 255, .17);
+      border-radius: 10px;
+      padding: 8px 10px;
+      line-height: 1.2;
+    }
+
+    #acompanamientos .item ul li::before {
+      content: "•";
+      color: var(--accent);
+      font-size: 16px;
+      line-height: 1;
     }
 
     #mensaje-card {
@@ -464,6 +534,10 @@
 
       #bowlsfrutales .item ul {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #acompanamientos .item ul {
+        grid-template-columns: 1fr;
       }
 
       .grid {
@@ -495,6 +569,10 @@
       }
 
       #bowlsfrutales .item ul {
+        grid-template-columns: 1fr;
+      }
+
+      #acompanamientos .item ul {
         grid-template-columns: 1fr;
       }
 
@@ -559,11 +637,15 @@
               class="bar"></span></h2>
           <div class="card" data-menu-section="bowlssalados"></div>
         </section>
+        <br>
+        <br>
+
 
         <section class="menu-section" id="calientes">
           <h2 class="title">Bebidas calientes <span class="bar"></span></h2>
           <div class="card" data-menu-section="calientes"></div>
         </section>
+
 
         <section class="menu-section" id="acompanamientos">
           <h2 class="title">Acompañamientos <span class="bar"></span></h2>
